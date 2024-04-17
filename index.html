@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Cardápio Cantina</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Cardápio - Cantina</h1>
+    <span class="date"></span>
+    <div id="options">
+        <div class="options-menu">
+            <div id="selectMenu">Selecionar do cardápio</div>
+        </div>
+    </div>
+  </header>
+  
+  <div id="view-cardapio-disponiveis"></div>
+
+  <div class="menu-cardapio">
+    <div class="menu-cardapio-titlebar">
+      <span>
+        <input type="button" id="btn-modal-close" class="button-close" value="X">
+      </span>
+    </div>
+    <form id="form-cardapio">
+      <fieldset>
+        <legend>Selecione os itens disponíveis no cardápio:</legend>
+        <div class="cardapio-items">
+          <div class="cardapio-item">
+            <img src="./img/Esfiha.png" width="50px">
+            <label for="item-esfiha" name="esfiha">Esfiha</label>
+            <input type="checkbox" id="item-esfiha" name="esfiha">
+          </div>
+
+          <div class="cardapio-item">
+            <img src="./img/croissant.webp" width="50px">
+            <label for="item-croissant" name="croissant">Croissant</label>
+            <input type="checkbox" id="item-croissant" name="croissant">
+          </div>
+
+          <div class="cardapio-item">
+            <img src="./img/coxinha.png" width="50px">
+            <label for="item-coxinha" name="coxinha">Coxinha</label>
+            <input type="checkbox" id="item-coxinha" name="coxinha">
+          </div>
+        </div>
+      </fieldset>
+      <div class="confirm-area">
+        <input type="button" id="confirm-cardapio" value="Confirmar">
+      </div>
+    </form>
+  </div>
+  <div id="form-cardapio-bgblock"></div>
+</body>
+
+</html>
