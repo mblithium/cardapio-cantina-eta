@@ -101,4 +101,31 @@ function actualDay() {
   document.querySelector(".date").innerHTML = actualDateFormated;
 }
 
-actualDay();
+
+
+function mountForm() {
+  let itemsFromMenu = ""
+  let itemsForm = document.querySelector("#cardapio-items");
+  itemsForm.innerHTML = "";
+
+
+  for (x of cardapioData.menu) {
+    itemsFromMenu += `<div class="cardapio-item">
+      <img src="${x.img}" width="50px">
+      <label for="item-${x.id}" name="${x.id}">${x.name}</label>
+      <input type="checkbox" id="item-${x.id}" name="${x.id}">
+    </div>`
+    console.log(x)
+  }
+
+  itemsFromMenu = itemsFromMenu.trim();
+  itemsForm.innerHTML = itemsFromMenu;
+
+}
+
+function init() {
+  actualDay();
+  mountForm();
+}
+
+init();
